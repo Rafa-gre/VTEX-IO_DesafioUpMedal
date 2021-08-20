@@ -1,0 +1,59 @@
+{
+  "footer": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+  },
+  "footer-layout.desktop": { 
+    "children": [
+      "flex-layout.row#footer"
+    ]
+  },
+  "footer-layout.mobile": { 
+    "children": [
+      "flex-layout.row#footer"
+    ]
+  },
+  "flex-layout.row#footer": {
+    "props":{"blockClass":"footerMenu"},
+    "children": [
+      "vtex.menu@2.x:menu#footermenu"
+    ]
+  },
+  "vtex.menu@2.x:menu#footermenu": {
+    "props": {
+      "items": [
+        {
+          "id": "menu-item-shop",
+          "type": "custom",
+          "iconId": "profile",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Entrar",
+            "text": "Entrar"
+          },
+          "iconProps": {
+            "id": "profile",
+            "size": 16,
+            "viewBox": "0 0 16 16"
+          }
+        },
+        {
+          "id": "menu-item-about-us",
+          "type": "custom",
+          "iconId": null,
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "https://api.whatsapp.com/send?phone=5511981856955&text=Bem%20Vindo%20a%20UpMedal%2C%20Qual%20a%20sua%20d%C3%BAvida%3F",
+            "noFollow": false,
+            "tagTitle": "Suporte",
+            "text": "Suporte"
+          }
+        }
+      ]
+    }
+  }
+}
+  

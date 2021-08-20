@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "storage": {
+      "leadform": [
+        "create",
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

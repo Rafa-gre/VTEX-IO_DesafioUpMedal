@@ -1,0 +1,5 @@
+{
+    "tableName": "leadform",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S"
+}

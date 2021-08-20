@@ -1,0 +1,102 @@
+{
+  "store.orderplaced": {
+    "blocks": [
+      "order-placed"
+    ]
+  },
+  "store.account": {
+    "blocks": [
+      "my-account"
+    ],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+  "store.login": {
+    "blocks": [
+      "login-content#default"
+    ]
+  },
+  "login-content#default": {
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true
+    }
+  },
+  "product-summary.shelf": {
+    "children": [
+      "flex-layout.row#topproduct",
+      "product-summary-image",
+      "product-summary-space",
+      "flex-layout.row#price",
+      "flex-layout.row#empty"
+    ]
+  },
+  "flex-layout.row#topproduct": {
+    "children": [
+      "flex-layout.col#name",
+      "flex-layout.col#rate"
+    ]
+  },
+  "flex-layout.col#name": {
+    "children": [
+      "product-summary-name"
+    ],
+    "props": {
+      "width": "80%"
+    }
+  },
+  "flex-layout.col#rate": {
+    "children": [
+      "product-rating-inline"
+    ],
+    "props": {
+      "width": "20%"
+    }
+  },
+  "flex-layout.row#price": {
+    "children": [
+      "flex-layout.col#price",
+      "flex-layout.col#btn",
+      "flex-layout.col#empty"
+    ],
+    "props": {
+      "blockClass": "colPrice",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.col#price": {
+    "children": [
+      "product-selling-price"
+    ],
+    "props": {
+      "blockClass": "colPrice",
+      "verticalAlign": "middle",
+      "horizontalAlign": "center"
+    }
+  },
+  "flex-layout.col#btn": {
+    "children": [
+      "add-to-cart-button"
+    ],
+    "props": {
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    }
+  },
+  "flex-layout.row#empty": {
+    "children": [
+      "flex-layout.col#empty1"
+    ]
+  },
+  "flex-layout.col#empty": {},
+  "flex-layout.col#empty1": {},
+  "add-to-cart-button": {
+    "props": {
+      "blockClass": "addBtn"
+    }
+  }
+}

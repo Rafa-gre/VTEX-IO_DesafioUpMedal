@@ -1,0 +1,233 @@
+{
+  "store.home": {
+    "blocks": [
+      "flex-layout.row#bar"
+    ]
+  },
+  //Flex Layout - 1° Linha - Tab-Bar//
+  "flex-layout.row#bar": {
+    "children": [
+      "tab-layout#home"
+    ]
+  },
+  "tab-layout#home": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ],
+    "props": {
+      "blockClass": "home",
+      "defaultActiveTabId": "sale"
+    }
+  },
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#sale",
+      "tab-list.item#corinthians",
+      "tab-list.item#palmeiras"
+    ]
+  },
+  "tab-list.item#sale": {
+    "props": {
+      "tabId": "sale",
+      "label": "Promoção",
+      "defaultActiveTab": true,
+      "blockClass": "menu"
+    }
+  },
+  "tab-list.item#corinthians": {
+    "props": {
+      "tabId": "corinthians",
+      "label": "Corinthians",
+      "blockClass": "menu"
+    }
+  },
+  "tab-list.item#palmeiras": {
+    "props": {
+      "tabId": "palmeiras",
+      "label": "Palmeiras",
+      "blockClass": "menu"
+    }
+  },
+  "tab-content#home": {
+    "children": [
+      "modal-trigger#lead",
+      "tab-content.item#corinthians",
+      "tab-content.item#palmeiras"
+    ]
+  },
+  //Conteúdo renderizado em cada aba//
+  "modal-trigger#lead": {
+    "children": [
+      "tab-content.item#sale",
+      "modal-layout"
+    ],
+    "props": {
+      "trigger": "load"
+    }
+  },
+  "tab-content.item#sale": {
+    "children": [
+      "flex-layout.row#slider",
+      "search-result-layout.customQuery#sale"
+    ],
+    "props": {
+      "tabId": "sale"
+    }
+  },
+  "tab-content.item#corinthians": {
+    "children": [
+      "flex-layout.row#slider",
+      "search-result-layout.customQuery#corinthians"
+    ],
+    "props": {
+      "tabId": "corinthians"
+    }
+  },
+  "tab-content.item#palmeiras": {
+    "children": [
+      "flex-layout.row#slider",
+      "search-result-layout.customQuery#palmeiras"
+    ],
+    "props": {
+      "tabId": "palmeiras"
+    }
+  },
+  //Slider layout//
+  "flex-layout.row#slider": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true,
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#slider"
+    ]
+  },
+  "flex-layout.col#slider": {
+    "props": {
+      "width": "70%",
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "slider-layout#home"
+    ]
+  },
+  "slider-layout#home": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": [
+      "image#1",
+      "image#2"
+    ]
+  },
+  //Imagens do slider layout//
+  "image#1": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T204214Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1813a6ffba05bd9f9a64998dfa46292c165da53fee30db73a3a73101ba4e7c1f",
+      "maxWidth": "600",
+      "maxHeight": "200"
+    }
+  },
+  "image#2": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T204249Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=42086c8a9a04afe62b2544b389f7c332ef02237f0d5e42fa78ec620ad6487f3d",
+      "maxWidth": "600",
+      "maxHeight": "200"
+    }
+  },
+  "search-result-layout.customQuery#sale": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByBestDiscountDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "UpMedal",
+        "mapField": "ft",
+        "skusFilter": "ALL_AVAILABLE"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.customQuery#corinthians": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByBestDiscountDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "corinthians",
+        "mapField": "ft",
+        "skusFilter": "ALL_AVAILABLE"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.customQuery#palmeiras": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByBestDiscountDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "palmeiras",
+        "mapField": "ft",
+        "skusFilter": "ALL_AVAILABLE"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "modal-layout": {
+    "children": [
+      "modal-header",
+      "modal-content"
+    ]
+  },
+  "modal-header": {
+    "children": [
+      "rich-text#modalheader"
+    ]
+  },
+  "modal-content": {
+    "children": [
+      "image#modal",
+      "lead-form"
+    ]
+  },
+  "rich-text#modalheader": {
+    "props": {
+      "text": "## Ganhe ainda mais desconto!",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "textColor": "success",
+      "blockClass": "modalHeader"
+    }
+  },
+  "image#modal": {
+    "props": {
+      "src": "https://vetus.com.br/universidade/wp-content/uploads/2018/11/Cupom.jpg",
+      "maxHeight": 300,
+      "maxWidth": 600
+    }
+  }
+}

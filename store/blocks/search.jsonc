@@ -1,0 +1,114 @@
+{
+  "store.search": {
+    "blocks": [
+      "search-result-layout"
+    ]
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      "flex-layout.row#top",
+      "flex-layout.row#results",
+      "search-fetch-more"
+    ],
+    "props": {
+      "pagination": "showMore"
+    }
+  },
+  "flex-layout.row#top": {
+    "children": [
+      "rich-text#titlefilter"
+    ]
+  },
+  "flex-layout.row#results": {
+    "children": [
+      "flex-layout.col#search"
+    ]
+  },
+  "flex-layout.col#search": {
+    "children": [
+      "search-content"
+    ]
+  },
+  "rich-text#titlefilter": {
+    "props": {
+      "text": "Você está vendo provas de ",
+      "textPosition": "CENTER"
+    }
+  },
+  "search-content": {
+    "blocks": [
+      "gallery",
+      "not-found"
+    ]
+  },
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "two",
+          "component": "OneOrTwoLineSummary",
+          "itemsPerRow": 2
+        }
+      ],
+      "OneOrTwoLineSummary": "product-summary.shelf"
+    }
+  },
+  "search-result-layout.mobile":{
+    "children": [
+      "flex-layout.row#topmobile",
+      "flex-layout.row#resultsmobile",
+      "search-fetch-more"
+    ],
+    "props": {
+      "pagination": "showMore"
+    }
+  },
+  "flex-layout.row#topmobile": {
+    "children": [
+      "rich-text#titlefiltermobile"
+    ]
+  },
+  "flex-layout.row#resultsmobile": {
+    "children": [
+      "flex-layout.col#searchmobile"
+    ]
+  },
+  "flex-layout.col#searchmobile": {
+    "children": [
+      "search-content"
+    ]
+  },
+  "rich-text#titlefiltermobile": {
+    "props": {
+      "text": "Você está vendo provas de ",
+      "textPosition": "CENTER"
+    }
+  },
+  "search-content#mobile": {
+    "blocks": [
+      "gallery#mobile",
+      "not-found"
+    ]
+  },
+  "gallery#mobile": {
+    "props": {
+      "layouts": [
+        {
+          "name": "one",
+          "component": "OneOrTwoLineSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "OneOrTwoLineSummary": "product-summary.shelf"
+    }
+  }
+
+  
+}
