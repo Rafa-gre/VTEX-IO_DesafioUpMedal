@@ -1,11 +1,18 @@
-.listContainer {
-  background-color: #212121;
+
+.listItem :global(.vtex-button){
+  color: #ffffff
 }
-.lisItem--menu:hover {
-  background-color: #212121;
+
+.listItemActive :global(.vtex-button){
+  color: #59FF00;
+  border-bottom: 2px solid #59FF00;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: transparent;
+  border-radius: 0px;
 }
-.listItemActive--menu {
-  border-bottom: 2px solid #59ff00;
-  color: #59ff00;
-  background-color: #212121;
+
+.listItem:hover :global(.vtex-button){
+  background-color: transparent;
 }

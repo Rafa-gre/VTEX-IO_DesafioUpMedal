@@ -3,6 +3,17 @@
 }
 .brandName{
     font-family: Montserrat;
-    font-size:1.5rem;
-    font-weight:500
+    font-size:1.3rem;
+    font-weight:500;
+    color:#fff;
+    justify-content:center
+    
+}
+.nameContainer{
+    justify-content:center
+}
+.buyButtonContainer{
+    background-color:#424242;
+    border-bottom-left-radius: 0.5px;
+    border-bottom-right-radius: 0.5px;
 }

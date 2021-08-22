@@ -4,3 +4,40 @@
 .container--footerMenu {
   position: fixed;
 }
+.flexRowContent--main-header-mobile{
+  background-color: #424242;
+  align-items: center;
+}
+
+.flexCol--imagem-produto{
+  margin: 10cm;
+}
+
+.flexRowContent{
+  color: white;
+}
+
+.flexRow--footerMenu {
+  position: fixed;
+  margin-top: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 3;
+  background-color: #424242;
+}
+
+.flexRowContent--footerMenu {
+  padding: 0;
+  padding-top: 15px;
+  justify-content: space-around;
+}
+
+.flexRow--rodape {
+  margin-top: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  background-color: #424242;
+}

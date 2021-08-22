@@ -1,19 +1,24 @@
 {
   "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
   },
-  "footer-layout.desktop": { 
+  "footer-layout.desktop": {
     "children": [
       "flex-layout.row#footer"
     ]
   },
-  "footer-layout.mobile": { 
+  "footer-layout.mobile": {
     "children": [
       "flex-layout.row#footer"
     ]
   },
   "flex-layout.row#footer": {
-    "props":{"blockClass":"footerMenu"},
+    "props": {
+      "blockClass": "footerMenu"
+    },
     "children": [
       "vtex.menu@2.x:menu#footermenu"
     ]
@@ -56,4 +61,3 @@
     }
   }
 }
-  
